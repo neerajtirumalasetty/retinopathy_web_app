@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 50%, #eef2ff 100%);
+  min-height: 100vh;
+  transition: background 0.2s ease;
+}
+
+.dark body {
+  background: linear-gradient(135deg, #0f172a 0%, #111827 50%, #1e1b4b 100%);
+}
+
+html.dark body {
+  background: linear-gradient(135deg, #0f172a 0%, #111827 50%, #1e1b4b 100%);
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin-slow 0.9s linear infinite;
+}
